@@ -5,7 +5,7 @@ public class Thermometer {
     private int temperature;
 
     public void getTemperature(){
-        System.out.println("La temperatura actual es: "+temperature+" ºc");;
+        System.out.println("La temperatura actual es: "+temperature+"ºc");;
     }
 
     public void setTemperature(int temperature){
