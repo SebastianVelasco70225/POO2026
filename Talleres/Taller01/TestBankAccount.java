@@ -10,6 +10,7 @@ public class TestBankAccount {
         bankAccount.withdrawals(2000);
         bankAccount.withdrawals(-3000);
         bankAccount.deposits(-100);
+        bankAccount.withdrawals(9000);
         System.out.println("El saldo de la cuenta es: "+bankAccount.getBalance());
     }
 }
