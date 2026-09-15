@@ -6,23 +6,24 @@ public class BankAccount {
     private String accountHolder;
     private int count;
 
-    public void setAccountNumber (int accountNumber){
+    public boolean setAccountNumber (int accountNumber){
         if(count<1){
             this.accountNumber=accountNumber;
-            System.out.println("Número de cuenta registrado correctamente");
             count+=1;
+            return true;
         }
         else{
-            System.out.println("Error. Una vez registrado un número de cuenta no puede cambiarse");
+            return false;
         }
     }
 
-    public void setAccountHolder (String accountHolder){
+    public boolean setAccountHolder (String accountHolder){
         if (accountHolder!=""||accountHolder!=null){
             this.accountHolder=accountHolder;
+            return true;
         }
         else{
-            System.out.println("Nombre de cuenta inválido");
+            return false;
         }
     }
     
@@ -30,23 +31,23 @@ public class BankAccount {
         return balance;
     }
 
-    public void deposits(int deposit){
+    public boolean deposits(int deposit){
         if (deposit>0){
             balance+=deposit;
-            System.out.println("El deposito fue realizado correctamente");
+            return true;
         }
         else{
-            System.out.println("No se pudo realizar el depósito por: "+deposit);
+            return false;
         }
     }
 
-    public void withdrawals (int withdrawal){
+    public boolean withdrawals (int withdrawal){
         if (withdrawal>0&&((balance-withdrawal)==0||(balance-withdrawal)>0)){
             balance-=withdrawal;
-            System.out.println("El retiro se ha realizado correctamente");
+            return true;
         }
         else{
-            System.out.println("No se ha podido realizar el retiro por: "+withdrawal);
+            return false;
         }
     }
 
