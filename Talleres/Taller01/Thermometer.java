@@ -2,19 +2,19 @@ package Talleres.Taller01;
 
 public class Thermometer {
 
-    private int temperature;
+    private float temperature;
 
-    public void getTemperature(){
-        System.out.println("La temperatura actual es: "+temperature+"ºc");;
+    public float getTemperature(){
+        return temperature;
     }
 
-    public void setTemperature(int temperature){
+    public boolean setTemperature(int temperature){
         if(temperature>100||temperature<(-50)) {
-            System.out.println("No se pudo actualizar la temperatura");
+            return false;
         }
         else{
             this.temperature=temperature;
-            System.out.println("Temperatura actualizada");
+            return true;
         }
     }
 }
