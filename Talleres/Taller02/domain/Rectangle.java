@@ -1,9 +1,11 @@
 public class Rectangle extends Square {
     private double side2;
 
-    public Rectangle(double side1, double side2, int x, int y){
-        super(side1,x,y);
+    public Rectangle(double side1, double side2, int x, int y,int id){
+        super(side1,x,y,id);
         setSide2(side2);
+        calculateArea();
+        calculatePerimeter();
     }
 
     public double getSide2(){
@@ -17,12 +19,12 @@ public class Rectangle extends Square {
     }
 
     @Override 
-    public void calculatePerimeter(){
+    protected void calculatePerimeter(){
         double p=(getSide()*2)+(side2*2);
         setPerimeter(p);
     }
     @Override 
-    public void calculateArea(){
+    protected void calculateArea(){
         double a=getSide()*side2;
         setArea(a);
     }

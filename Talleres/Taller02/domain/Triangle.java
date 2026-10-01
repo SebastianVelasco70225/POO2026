@@ -1,9 +1,11 @@
 public class Triangle extends Rectangle {
     private double side3;
 
-    public Triangle (double side1, double side2, double side3, int x, int y){
-        super(side1, side2, x, y);
+    public Triangle (double side1, double side2, double side3, int x, int y, int id){
+        super(side1, side2, x, y, id);
         setSide3(side3);
+        calculateArea();
+        calculatePerimeter();
     }
 
     public void setSide3(double side3){
@@ -14,13 +16,13 @@ public class Triangle extends Rectangle {
     }
 
     @Override 
-    public void calculatePerimeter(){
+    protected void calculatePerimeter(){
         double p=getSide()+getSide2()+side3;
         setPerimeter(p);
     }   
 
     @Override 
-    public void calculateArea(){
+    protected void calculateArea(){
         double p=getPerimeter()/2;
         p=p*(p-getSide())*(p-getSide2())*(p-side3);
         double area=Math.sqrt(p);

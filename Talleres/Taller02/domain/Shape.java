@@ -3,7 +3,7 @@ public abstract class Shape {
     private double area;
     private int x;
     private int y;
-
+    private int id;
     public void setPerimeter(double perimeter){
         this.perimeter=perimeter;
     }
@@ -31,6 +31,15 @@ public abstract class Shape {
        int [] position={x,y};
        return position;
     }
+
+    public void setId(int id){
+        this.id=id;
+    }
+
+    public int getId(){
+        return id;
+    }
+
     protected abstract void calculatePerimeter();
     protected abstract void calculateArea();
 }

@@ -1,10 +1,13 @@
 public class Square extends Shape{
     private double side1;
     
-    public Square(double side1,int x, int y) {
+    public Square(double side1,int x, int y, int id) {
         setSide(side1);
         setXposition(x);
         setYposition(y);
+        setId(id);
+        calculateArea();
+        calculatePerimeter();
     }
 
     public double getSide() {
