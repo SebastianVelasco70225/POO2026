@@ -1,4 +1,4 @@
-package POO2026.talleres.taller02.domain;
+package POO2026.Talleres.taller02.domain;
 public class Square extends Shape{
     private double side1;
     

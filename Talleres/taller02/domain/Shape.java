@@ -1,4 +1,4 @@
-package POO2026.talleres.taller02.domain;
+package POO2026.Talleres.taller02.domain;
 public abstract class Shape {
     private double perimeter;
     private double area;

@@ -1,5 +1,5 @@
-package POO2026.talleres.taller02.view;
-import POO2026.talleres.taller02.domain.*;
+package POO2026.Talleres.taller02.view;
+import POO2026.Talleres.taller02.domain.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
@@ -45,6 +45,7 @@ public class Main {
 
     public static Shape[] addShape(Shape shape, int count, Shape [] list){
         list[count]=shape;
+        System.out.println("La figura "+shape.getName()+" ha sido creada con ID: "+shape.getId());
         return list;
     }
 

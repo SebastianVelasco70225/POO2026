@@ -1,4 +1,4 @@
-package POO2026.talleres.taller02.domain;
+package POO2026.Talleres.taller02.domain;
 public class Circle extends Shape {
     
     private double radius;
@@ -18,7 +18,7 @@ public class Circle extends Shape {
         }
         this.radius=radius;
     }
-
+    
     public double getRadius (){
         return radius;
     }
